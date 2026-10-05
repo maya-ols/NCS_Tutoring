@@ -71,7 +71,7 @@ with tab2:
     else:
         df = pd.DataFrame(signup_records)
         df["Duration (minutes)"] = pd.to_numeric(df["Duration (minutes)"], errors="coerce")
-        df["DateParsed"] = pd.to_datetime(df["Date"], format="%m/%d/%Y", errors="coerce")
+        df["DateParsed"] = pd.to_datetime(df["Date"], format="%m/%d/%y", errors="coerce")
 
         past = df[df["DateParsed"] < today]
         future = df[df["DateParsed"] >= today]
