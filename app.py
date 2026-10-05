@@ -27,7 +27,7 @@ sessions_records = sessions_ws.get_all_records()
 sessions_df = pd.DataFrame(sessions_records)
 
 if not sessions_df.empty:
-    sessions_df["DateParsed"] = pd.to_datetime(sessions_df["Date"], format="%m/%d/%Y", errors="coerce")
+    sessions_df["DateParsed"] = pd.to_datetime(sessions_df["Date"], format="%m/%d/%y", errors="coerce")
 
 today = pd.Timestamp(datetime.now().date())
 
